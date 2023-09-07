@@ -1,8 +1,8 @@
 {
-  "name": "extension-template",
-  "displayName": "Extension template",
-  "version": "0.0.1",
-  "description": "browser extension template",
+  "name": "prevent-enter-extension",
+  "displayName": "Prevent enter extension",
+  "version": "1.0.0",
+  "description": "Prevent enter extension",
   "author": "yuta-nishi",
   "scripts": {
     "dev": "plasmo dev",
