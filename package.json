@@ -14,7 +14,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@plasmohq/messaging": "^0.5.0",
     "@plasmohq/storage": "^1.8.0",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-switch": "^1.0.3",
@@ -53,7 +52,11 @@
   },
   "manifest": {
     "host_permissions": [
-      "https://*/*"
+      "https://chat.openai.com/*"
+    ],
+    "permissions": [
+      "storage",
+      "tabs"
     ]
   }
 }
