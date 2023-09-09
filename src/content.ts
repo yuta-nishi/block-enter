@@ -1,3 +1,4 @@
+import { Storage } from '@plasmohq/storage';
 import type { PlasmoCSConfig } from 'plasmo';
 
 export const config: PlasmoCSConfig = {
@@ -6,6 +7,7 @@ export const config: PlasmoCSConfig = {
 
 /**
  * Prevent event dispatch when pressing Enter key alone.
+ *
  * @param e
  */
 const preventDefaultEnter = (e: KeyboardEvent) => {
@@ -20,6 +22,7 @@ const preventDefaultEnter = (e: KeyboardEvent) => {
 
 /**
  * Dispatch the original Enter key event when pressing Ctrl/Cmd + Enter.
+ *
  * @param e
  */
 const dispatchCtrlEnter = (e: KeyboardEvent) => {
@@ -42,11 +45,45 @@ const dispatchCtrlEnter = (e: KeyboardEvent) => {
   }
 };
 
-document.addEventListener(
-  'keydown',
-  (e: KeyboardEvent) => {
-    preventDefaultEnter(e);
-    dispatchCtrlEnter(e);
+/**
+ * Handle preventDefaultEnter and dispatchCtrlEnter.
+ *
+ * @param e
+ * @see preventDefaultEnter
+ * @see dispatchCtrlEnter
+ */
+const handleKeyDown = (e: KeyboardEvent) => {
+  preventDefaultEnter(e);
+  dispatchCtrlEnter(e);
+};
+
+/**
+ * Add preventDefaultEnter and dispatchCtrlEnter.
+ *
+ * @see preventDefaultEnter
+ * @see dispatchCtrlEnter
+ */
+const addKeyDownListener = () => {
+  document.addEventListener('keydown', handleKeyDown, { capture: true });
+};
+
+/**
+ * Remove preventDefaultEnter and dispatchCtrlEnter.
+ *
+ * @see preventDefaultEnter
+ * @see dispatchCtrlEnter
+ */
+const removeKeyDownListener = () => {
+  document.removeEventListener('keydown', handleKeyDown, { capture: true });
+};
+
+const storage = new Storage();
+storage.watch({
+  enabled: (c) => {
+    if (c.newValue) {
+      addKeyDownListener();
+    } else {
+      removeKeyDownListener();
+    }
   },
-  { capture: true },
-);
+});
