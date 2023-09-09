@@ -1,14 +1,12 @@
-import { Label } from '~/components/ui/label';
-import { Switch } from '~/components/ui/switch';
+import { CountButton } from '~/components/CountButton';
 import '~/style.css';
 
-const IndexPopup = () => {
+function IndexPopup() {
   return (
-    <div className="flex h-16 w-52 items-center justify-center space-x-2">
-      <Switch id="enabled" />
-      <Label htmlFor="enabled">enabled</Label>
+    <div className="flex h-16 w-40 items-center justify-center">
+      <CountButton />
     </div>
   );
-};
+}
 
 export default IndexPopup;
