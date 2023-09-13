@@ -24,9 +24,9 @@ const IndexPopup = (): JSX.Element => {
   };
 
   return (
-    <div className="flex h-16 w-52 items-center justify-center space-x-2">
+    <div className="flex h-16 w-52 items-center justify-center space-x-3">
       <Switch id="enabled" checked={enabled} onCheckedChange={handleEnabled} />
-      <Label htmlFor="enabled">enabled</Label>
+      <Label htmlFor="enabled">on/off</Label>
     </div>
   );
 };
