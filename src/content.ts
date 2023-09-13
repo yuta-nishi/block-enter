@@ -78,6 +78,14 @@ const removeKeyDownListener = () => {
 };
 
 const storage = new Storage();
+
+(async () => {
+  const enabled = await storage.get('enabled');
+  if (enabled) {
+    addKeyDownListener();
+  }
+})();
+
 storage.watch({
   enabled: (c) => {
     if (c.newValue) {
