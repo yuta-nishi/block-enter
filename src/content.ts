@@ -20,30 +20,30 @@ const preventDefaultEnter = (e: KeyboardEvent) => {
   }
 };
 
-/**
- * Dispatch the original Enter key event when pressing Ctrl/Cmd + Enter.
- *
- * @param e
- */
-const dispatchCtrlEnter = (e: KeyboardEvent) => {
-  if (e.metaKey && e.key === 'Enter' && e.target instanceof HTMLTextAreaElement) {
-    const newEvent = new KeyboardEvent('keydown', {
-      key: 'Enter',
-      code: 'Enter',
-      metaKey: true,
-    });
-    e.target.dispatchEvent(newEvent);
-  }
+// /**
+//  * Dispatch the original Enter key event when pressing Ctrl/Cmd + Enter.
+//  *
+//  * @param e
+//  */
+// const dispatchCtrlEnter = (e: KeyboardEvent) => {
+//   if (e.metaKey && e.key === 'Enter' && e.target instanceof HTMLTextAreaElement) {
+//     const newEvent = new KeyboardEvent('keydown', {
+//       key: 'Enter',
+//       code: 'Enter',
+//       metaKey: true,
+//     });
+//     e.target.dispatchEvent(newEvent);
+//   }
 
-  if (e.ctrlKey && e.key === 'Enter' && e.target instanceof HTMLTextAreaElement) {
-    const newEvent = new KeyboardEvent('keydown', {
-      key: 'Enter',
-      code: 'Enter',
-      ctrlKey: true,
-    });
-    e.target.dispatchEvent(newEvent);
-  }
-};
+//   if (e.ctrlKey && e.key === 'Enter' && e.target instanceof HTMLTextAreaElement) {
+//     const newEvent = new KeyboardEvent('keydown', {
+//       key: 'Enter',
+//       code: 'Enter',
+//       ctrlKey: true,
+//     });
+//     e.target.dispatchEvent(newEvent);
+//   }
+// };
 
 /**
  * Handle preventDefaultEnter and dispatchCtrlEnter.
@@ -54,7 +54,7 @@ const dispatchCtrlEnter = (e: KeyboardEvent) => {
  */
 const handleKeyDown = (e: KeyboardEvent) => {
   preventDefaultEnter(e);
-  dispatchCtrlEnter(e);
+  // dispatchCtrlEnter(e);
 };
 
 /**
