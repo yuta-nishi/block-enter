@@ -1,6 +1,6 @@
 [project]
 name = "block-enter"
-version = "1.0.0"
+version = "1.0.1"
 description = "Block Enter"
 authors = [{ name = "yuta-nishi" }]
 dependencies = ["pillow>=10.0.0", "fire>=0.5.0"]

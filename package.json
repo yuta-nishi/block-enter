@@ -1,7 +1,7 @@
 {
   "name": "block-enter",
   "displayName": "Block Enter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "__MSG_description__",
   "author": "yuta-nishi",
   "scripts": {
