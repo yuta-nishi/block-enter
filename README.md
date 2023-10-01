@@ -12,5 +12,4 @@ Ctrl/Cmd + Enter：送信
 
 拡張機能ボタンを押すことでon/off切り替えが可能。
 
-https://github.com/yuta-nishi/block-enter/assets/91929233/c7807837-defa-4269-8591-7f239ef91b02
-
+[デモ動画](https://www.youtube.com/watch?v=qracBb9PGDk)
