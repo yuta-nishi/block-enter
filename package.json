@@ -56,7 +56,8 @@
   "manifest": {
     "default_locale": "en",
     "host_permissions": [
-      "https://chat.openai.com/*"
+      "https://chat.openai.com/*",
+      "https://bard.google.com/*"
     ],
     "permissions": [
       "storage",
