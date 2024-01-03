@@ -12,7 +12,8 @@ const preventDefaultEnter = (e: KeyboardEvent) => {
   if (
     e.key === 'Enter' &&
     !(e.ctrlKey || e.metaKey) &&
-    e.target instanceof HTMLTextAreaElement
+    ((e.target as HTMLTextAreaElement).id === 'prompt-textarea' ||
+      (e.target as HTMLDivElement).role === 'textbox')
   ) {
     e.stopPropagation();
   }
