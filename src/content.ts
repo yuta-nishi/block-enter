@@ -2,15 +2,18 @@ import { sendToBackground } from '@plasmohq/messaging';
 import { Storage } from '@plasmohq/storage';
 import type { PlasmoCSConfig } from 'plasmo';
 
+import { urls } from '~/lib/config';
+
 export const config: PlasmoCSConfig = {
-  matches: ['https://chat.openai.com/*'],
+  matches: urls,
 };
 
 const preventDefaultEnter = (e: KeyboardEvent) => {
   if (
     e.key === 'Enter' &&
     !(e.ctrlKey || e.metaKey) &&
-    e.target instanceof HTMLTextAreaElement
+    ((e.target as HTMLTextAreaElement).id === 'prompt-textarea' ||
+      (e.target as HTMLDivElement).role === 'textbox')
   ) {
     e.stopPropagation();
   }

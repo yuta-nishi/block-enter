@@ -1,5 +1,6 @@
 import { Storage } from '@plasmohq/storage';
 
+import { hostnames } from '~/lib/config';
 import { updateBadge } from '~/lib/utils';
 
 chrome.runtime.onInstalled.addListener(() => {
@@ -19,7 +20,7 @@ chrome.tabs.onUpdated.addListener((tabId, _changeInfo, tab) => {
   }
 
   const url = new URL(tab.url);
-  if (url.hostname !== 'chat.openai.com') {
+  if (!hostnames.includes(url.hostname)) {
     chrome.action.disable(tabId);
     return;
   }
