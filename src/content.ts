@@ -2,10 +2,8 @@ import { sendToBackground } from '@plasmohq/messaging';
 import { Storage } from '@plasmohq/storage';
 import type { PlasmoCSConfig } from 'plasmo';
 
-import { urls } from '~/lib/config';
-
 export const config: PlasmoCSConfig = {
-  matches: urls,
+  matches: ['https://chat.openai.com/*', 'https://bard.google.com/*'],
 };
 
 const preventDefaultEnter = (e: KeyboardEvent) => {
