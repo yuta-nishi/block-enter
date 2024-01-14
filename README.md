@@ -3,8 +3,12 @@
   <h1 style="color: hsl(, 100%, 50%);">Block Enter</h1>
 </div>
 
-ChatGPTのページでEnterによる送信を防ぐ拡張機能。\
+チャットアプリでEnterによる送信を防ぐ拡張機能。\
 [Chrome Web Storeはこちら](https://chrome.google.com/webstore/detail/block-enter/epcbggfjoekpdmenggjelljjegjdbpog)
+
+## 対象
+- ChatGPT
+- Bard
 
 ## 使い方
 Enter：改行 \
