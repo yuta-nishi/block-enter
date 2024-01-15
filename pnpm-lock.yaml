@@ -18,8 +18,8 @@ dependencies:
     specifier: ^1.0.3
     version: 1.0.3(@types/react-dom@18.2.18)(@types/react@18.2.47)(react-dom@18.2.0)(react@18.2.0)
   lucide-react:
-    specifier: ^0.307.0
-    version: 0.307.0(react@18.2.0)
+    specifier: ^0.309.0
+    version: 0.309.0(react@18.2.0)
   plasmo:
     specifier: 0.84.0
     version: 0.84.0(postcss@8.4.31)(react-dom@18.2.0)(react@18.2.0)
@@ -44,8 +44,8 @@ devDependencies:
     specifier: 0.0.256
     version: 0.0.256
   '@types/node':
-    specifier: 20.10.7
-    version: 20.10.7
+    specifier: 20.11.0
+    version: 20.11.0
   '@types/react':
     specifier: 18.2.47
     version: 18.2.47
@@ -89,11 +89,11 @@ devDependencies:
     specifier: ^8.4.31
     version: 8.4.31
   prettier:
-    specifier: 3.1.1
-    version: 3.1.1
+    specifier: 3.2.2
+    version: 3.2.2
   prettier-plugin-tailwindcss:
     specifier: ^0.5.4
-    version: 0.5.4(prettier@3.1.1)
+    version: 0.5.4(prettier@3.2.2)
   tailwind-merge:
     specifier: ^2.0.0
     version: 2.0.0
@@ -111,7 +111,7 @@ devDependencies:
     version: 4.2.0(typescript@5.3.3)
   vitest:
     specifier: ^1.0.0
-    version: 1.1.1(@types/node@20.10.7)(happy-dom@12.0.1)(jsdom@23.0.1)
+    version: 1.1.1(@types/node@20.11.0)(happy-dom@12.0.1)(jsdom@23.0.1)
 
 packages:
 
@@ -3320,7 +3320,7 @@ packages:
       dom-accessibility-api: 0.5.16
       lodash: 4.17.21
       redent: 3.0.0
-      vitest: 1.1.1(@types/node@20.10.7)(happy-dom@12.0.1)(jsdom@23.0.1)
+      vitest: 1.1.1(@types/node@20.11.0)(happy-dom@12.0.1)(jsdom@23.0.1)
     dev: true
 
   /@testing-library/react@14.0.0(react-dom@18.2.0)(react@18.2.0):
@@ -3391,8 +3391,8 @@ packages:
   /@types/json-schema@7.0.12:
     resolution: {integrity: sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==}
 
-  /@types/node@20.10.7:
-    resolution: {integrity: sha512-fRbIKb8C/Y2lXxB5eVMj4IU7xpdox0Lh8bUPEdtLysaylsml1hOOx1+STloRs/B9nf7C6kPRmmg/V7aQW7usNg==}
+  /@types/node@20.11.0:
+    resolution: {integrity: sha512-o9bjXmDNcF7GbM4CNQpmi+TutCgap/K3w1JyKgxAjqx41zp9qlIAVFi0IhCNsJcXolEqLWhbFbEeL0PvYm4pcQ==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -3572,7 +3572,7 @@ packages:
       std-env: 3.7.0
       test-exclude: 6.0.0
       v8-to-istanbul: 9.2.0
-      vitest: 1.1.1(@types/node@20.10.7)(happy-dom@12.0.1)(jsdom@23.0.1)
+      vitest: 1.1.1(@types/node@20.11.0)(happy-dom@12.0.1)(jsdom@23.0.1)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -6171,8 +6171,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /lucide-react@0.307.0(react@18.2.0):
-    resolution: {integrity: sha512-+vZ+vUiWPZTMnLHURg4aoIaz6NHOWXVVcVd8iLROu1k4LbyjcnHIKmbjXHCmulz7XAYLWRVXzhJJgIr+Aq3vOg==}
+  /lucide-react@0.309.0(react@18.2.0):
+    resolution: {integrity: sha512-zNVPczuwFrCfksZH3zbd1UDE6/WYhYAdbe2k7CImVyPAkXLgIwbs6eXQ4loigqDnUFjyFYCI5jZ1y10Kqal0dg==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
@@ -6985,7 +6985,7 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-tailwindcss@0.5.4(prettier@3.1.1):
+  /prettier-plugin-tailwindcss@0.5.4(prettier@3.2.2):
     resolution: {integrity: sha512-QZzzB1bID6qPsKHTeA9qPo1APmmxfFrA5DD3LQ+vbTmAnY40eJI7t9Q1ocqel2EKMWNPLJqdTDWZj1hKYgqSgg==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
@@ -7037,11 +7037,11 @@ packages:
       prettier-plugin-twig-melody:
         optional: true
     dependencies:
-      prettier: 3.1.1
+      prettier: 3.2.2
     dev: true
 
-  /prettier@3.1.1:
-    resolution: {integrity: sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==}
+  /prettier@3.2.2:
+    resolution: {integrity: sha512-HTByuKZzw7utPiDO523Tt2pLtEyK7OibUD9suEJQrPUCYQqrHr74GGX6VidMrovbf/I50mPqr8j/II6oBAuc5A==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
@@ -8117,7 +8117,7 @@ packages:
       convert-source-map: 2.0.0
     dev: true
 
-  /vite-node@1.1.1(@types/node@20.10.7):
+  /vite-node@1.1.1(@types/node@20.11.0):
     resolution: {integrity: sha512-2bGE5w4jvym5v8llF6Gu1oBrmImoNSs4WmRVcavnG2me6+8UQntTqLiAMFyiAobp+ZXhj5ZFhI7SmLiFr/jrow==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -8126,7 +8126,7 @@ packages:
       debug: 4.3.4
       pathe: 1.1.1
       picocolors: 1.0.0
-      vite: 5.0.10(@types/node@20.10.7)
+      vite: 5.0.10(@types/node@20.11.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -8154,7 +8154,7 @@ packages:
       - typescript
     dev: true
 
-  /vite@5.0.10(@types/node@20.10.7):
+  /vite@5.0.10(@types/node@20.11.0):
     resolution: {integrity: sha512-2P8J7WWgmc355HUMlFrwofacvr98DAjoE52BfdbwQtyLH06XKwaL/FMnmKM2crF0iX4MpmMKoDlNCB1ok7zHCw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -8182,7 +8182,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.10.7
+      '@types/node': 20.11.0
       esbuild: 0.19.11
       postcss: 8.4.32
       rollup: 4.9.2
@@ -8190,7 +8190,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@1.1.1(@types/node@20.10.7)(happy-dom@12.0.1)(jsdom@23.0.1):
+  /vitest@1.1.1(@types/node@20.11.0)(happy-dom@12.0.1)(jsdom@23.0.1):
     resolution: {integrity: sha512-Ry2qs4UOu/KjpXVfOCfQkTnwSXYGrqTbBZxw6reIYEFjSy1QUARRg5pxiI5BEXy+kBVntxUYNMlq4Co+2vD3fQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -8215,7 +8215,7 @@ packages:
       jsdom:
         optional: true
     dependencies:
-      '@types/node': 20.10.7
+      '@types/node': 20.11.0
       '@vitest/expect': 1.1.1
       '@vitest/runner': 1.1.1
       '@vitest/snapshot': 1.1.1
@@ -8236,8 +8236,8 @@ packages:
       strip-literal: 1.3.0
       tinybench: 2.5.1
       tinypool: 0.8.1
-      vite: 5.0.10(@types/node@20.10.7)
-      vite-node: 1.1.1(@types/node@20.10.7)
+      vite: 5.0.10(@types/node@20.11.0)
+      vite-node: 1.1.1(@types/node@20.11.0)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
