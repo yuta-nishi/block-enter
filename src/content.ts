@@ -2,6 +2,8 @@ import { sendToBackground } from '@plasmohq/messaging';
 import { Storage } from '@plasmohq/storage';
 import type { PlasmoCSConfig } from 'plasmo';
 
+// Hardcoding is required because defining variables externally does not correctly
+// propagate to manifest.json.
 export const config: PlasmoCSConfig = {
   matches: ['https://chat.openai.com/*', 'https://bard.google.com/*'],
 };
