@@ -5,7 +5,7 @@ import type { PlasmoCSConfig } from 'plasmo';
 // Hardcoding is required because defining variables externally does not correctly
 // propagate to manifest.json.
 export const config: PlasmoCSConfig = {
-  matches: ['https://chat.openai.com/*', 'https://bard.google.com/*'],
+  matches: ['https://chat.openai.com/*', 'https://gemini.google.com/*'],
 };
 
 const preventDefaultEnter = (e: KeyboardEvent) => {

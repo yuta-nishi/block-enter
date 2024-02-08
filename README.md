@@ -7,10 +7,12 @@
 [Chrome Web Storeはこちら](https://chrome.google.com/webstore/detail/block-enter/epcbggfjoekpdmenggjelljjegjdbpog)
 
 ## 対象
+
 - ChatGPT
-- Bard
+- Gemini
 
 ## 使い方
+
 Enter：改行 \
 Ctrl/Cmd + Enter：送信
 
