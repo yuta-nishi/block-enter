@@ -1,24 +1,19 @@
 [project]
-name = "block-enter"
-version = "1.1.1"
-description = "Block Enter"
 authors = [{ name = "yuta-nishi" }]
-dependencies = ["pillow>=10.0.0", "fire>=0.5.0"]
+dependencies = ["fire>=0.5.0", "pillow>=10.0.0"]
+description = "Block Enter"
+name = "block-enter"
 readme = "README.md"
 requires-python = ">= 3.8"
+version = "1.1.4"
 
 [build-system]
-requires = ["hatchling"]
 build-backend = "hatchling.build"
+requires = ["hatchling"]
 
 [tool.rye]
+dev-dependencies = ["black~=23.9.1", "mypy>=1.5.1", "pip-search~=0.0.12", "ruff>=0.0.287"]
 managed = true
-dev-dependencies = [
-  "pip-search~=0.0.12",
-  "black~=23.9.1",
-  "ruff>=0.0.287",
-  "mypy>=1.5.1",
-]
 
 [tool.hatch.metadata]
 allow-direct-references = true
@@ -27,15 +22,15 @@ allow-direct-references = true
 line-length = 90
 
 [tool.mypy]
-strict = true
 ignore_missing_imports = true
+strict = true
 
 [tool.ruff]
-select = [
-  "F", # pyflakes
-  "E", # pycodestyle
-  "W", # pycodestyle warnings
-  "I", # isort
-]
 ignore = []
 line-length = 90
+select = [
+  "E", # pycodestyle
+  "F", # pyflakes
+  "I", # isort
+  "W", # pycodestyle warnings
+]
