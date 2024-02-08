@@ -1,1 +1,1 @@
-export const hostnames = ['chat.openai.com', 'bard.google.com'];
+export const hostnames = ['chat.openai.com', 'gemini.google.com'];
