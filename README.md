@@ -3,19 +3,19 @@
   <h1 style="color: hsl(, 100%, 50%);">Block Enter</h1>
 </div>
 
-チャットアプリでEnterによる送信を防ぐ拡張機能。\
-[Chrome Web Storeはこちら](https://chrome.google.com/webstore/detail/block-enter/epcbggfjoekpdmenggjelljjegjdbpog)
+Extension to prevent sending by Enter in chat applications.
+[Chrome Web Store link](https://chrome.google.com/webstore/detail/block-enter/epcbggfjoekpdmenggjelljjegjdbpog)
 
-## 対象
+## Target
 
 - ChatGPT
 - Gemini
 
-## 使い方
+## Usage
 
-Enter：改行 \
-Ctrl/Cmd + Enter：送信
+Enter： New line
+Ctrl/Cmd + Enter： Send
 
-拡張機能ボタンを押すことでon/off切り替えが可能。
+Toggle on/off by clicking the extension icon.
 
-[デモ動画](https://www.youtube.com/watch?v=qracBb9PGDk)
+[Demo Video](https://www.youtube.com/watch?v=qracBb9PGDk)
