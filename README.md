@@ -3,7 +3,7 @@
   <h1 style="color: hsl(, 100%, 50%);">Block Enter</h1>
 </div>
 
-Extension to prevent sending by Enter in chat applications.
+Extension to prevent sending by Enter in chat applications. \
 [Chrome Web Store link](https://chrome.google.com/webstore/detail/block-enter/epcbggfjoekpdmenggjelljjegjdbpog)
 
 ## Target
@@ -13,7 +13,7 @@ Extension to prevent sending by Enter in chat applications.
 
 ## Usage
 
-Enter： New line
+Enter： New line \
 Ctrl/Cmd + Enter： Send
 
 Toggle on/off by clicking the extension icon.
