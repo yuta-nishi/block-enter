@@ -4,12 +4,14 @@
   "version": "1.1.4",
   "description": "__MSG_description__",
   "author": "yuta-nishi",
+  "homepage": "https://github.com/yuta-nishi/block-enter",
   "scripts": {
     "dev": "plasmo dev",
     "build": "plasmo build",
     "package": "plasmo package",
     "test": "vitest run --passWithNoTests",
     "coverage": "vitest run --coverage",
+    "watch": "vitest watch",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "fmt": "prettier --write 'src/**/*.{ts,tsx}'",
     "prepare": "husky install"
@@ -42,7 +44,6 @@
     "eslint-plugin-react": "^7.33.2",
     "happy-dom": "^13.0.0",
     "husky": "^9.0.0",
-    "jsdom": "^24.0.0",
     "postcss": "^8.4.31",
     "prettier": "3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.4",
