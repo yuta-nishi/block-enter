@@ -22,6 +22,7 @@ describe('IndexPopup', async () => {
       render(<IndexPopup />);
     });
 
+    expect(mockGet).toHaveBeenCalledWith('enabled');
     const switchButton = screen.getByRole('switch');
     expect(switchButton).toHaveAttribute('aria-checked', 'false');
   });
@@ -32,8 +33,10 @@ describe('IndexPopup', async () => {
       render(<IndexPopup />);
     });
 
+    expect(mockGet).toHaveBeenCalledWith('enabled');
     const switchButton = screen.getByRole('switch');
     expect(switchButton).toHaveAttribute('aria-checked', 'true');
+
     userEvent.click(switchButton);
     await waitFor(() => {
       expect(switchButton).toHaveAttribute('aria-checked', 'false');
