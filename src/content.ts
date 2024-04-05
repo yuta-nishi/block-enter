@@ -5,14 +5,20 @@ import type { PlasmoCSConfig } from 'plasmo';
 // Hardcoding is required because defining variables externally does not correctly
 // propagate to manifest.json.
 export const config: PlasmoCSConfig = {
-  matches: ['https://chat.openai.com/*', 'https://gemini.google.com/*'],
+  matches: [
+    'https://chat.openai.com/*',
+    'https://gemini.google.com/*',
+    'https://www.perplexity.ai/*',
+  ],
 };
 
 const preventDefaultEnter = (e: KeyboardEvent) => {
   if (
     e.key === 'Enter' &&
     !(e.ctrlKey || e.metaKey) &&
-    ((e.target as HTMLTextAreaElement).id === 'prompt-textarea' ||
+    // chat.openai.com and www.perplexity.ai
+    ((e.target as HTMLTextAreaElement).tagName === 'TEXTAREA' ||
+      // gemini.google.com
       (e.target as HTMLDivElement).role === 'textbox')
   ) {
     e.stopPropagation();
