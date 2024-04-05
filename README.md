@@ -10,6 +10,7 @@ Extension to prevent sending by Enter in chat applications. \
 
 - ChatGPT
 - Gemini
+- Perplexity
 
 ## Usage
 
