@@ -57,7 +57,7 @@
   "manifest": {
     "default_locale": "en",
     "host_permissions": [
-      "https://chat.openai.com/*",
+      "https://chatgpt.com/*",
       "https://gemini.google.com/*",
       "https://www.perplexity.ai/*"
     ],
