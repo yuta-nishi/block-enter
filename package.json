@@ -1,7 +1,7 @@
 {
   "name": "block-enter",
   "displayName": "Block Enter",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "__MSG_description__",
   "author": "yuta-nishi",
   "homepage": "https://github.com/yuta-nishi/block-enter",
@@ -57,7 +57,7 @@
   "manifest": {
     "default_locale": "en",
     "host_permissions": [
-      "https://chat.openai.com/*",
+      "https://chatgpt.com/*",
       "https://gemini.google.com/*",
       "https://www.perplexity.ai/*"
     ],

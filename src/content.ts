@@ -6,7 +6,7 @@ import type { PlasmoCSConfig } from 'plasmo';
 // propagate to manifest.json.
 export const config: PlasmoCSConfig = {
   matches: [
-    'https://chat.openai.com/*',
+    'https://chatgpt.com/*',
     'https://gemini.google.com/*',
     'https://www.perplexity.ai/*',
   ],
