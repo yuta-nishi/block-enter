@@ -21,7 +21,7 @@
     "@plasmohq/storage": "^1.8.0",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-switch": "^1.0.3",
-    "lucide-react": "^0.438.0",
+    "lucide-react": "^0.439.0",
     "plasmo": "0.89.1",
     "react": "18.3.1",
     "react-dom": "18.3.1"
@@ -31,7 +31,7 @@
     "@testing-library/react": "^15.0.0",
     "@testing-library/user-event": "^14.5.1",
     "@types/chrome": "0.0.270",
-    "@types/node": "20.16.3",
+    "@types/node": "20.16.5",
     "@types/react": "18.3.5",
     "@types/react-dom": "18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
