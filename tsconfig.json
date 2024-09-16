@@ -4,8 +4,9 @@
     "node_modules"
   ],
   "include": [
+    ".plasmo/index.d.ts",
     "./**/*.ts",
-    "./**/*.tsx",
+    "./**/*.tsx"
   ],
   "compilerOptions": {
     "jsx": "react-jsx",
@@ -29,6 +30,6 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "Node"
   }
 }
