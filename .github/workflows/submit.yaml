@@ -1,4 +1,5 @@
-name: 'Submit to Web Store'
+name: Submit to Web Store
+
 on:
   workflow_dispatch:
 
@@ -6,7 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
       - name: Cache pnpm modules
         uses: actions/cache@v4
         with:
@@ -14,20 +17,26 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-
-      - uses: pnpm/action-setup@v4.0.0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4.0.0
         with:
           version: latest
           run_install: true
+
       - name: Use Node.js 18.x
         uses: actions/setup-node@v4.0.3
         with:
           node-version: 18.x
           cache: 'pnpm'
+
       - name: Build the extension
         run: pnpm build
+
       - name: Package the extension into a zip artifact
         run: pnpm package
-      - name: Browser Platform Publish
+
+      - name: Publish the extension to the Chrome Web Store
         uses: PlasmoHQ/bpp@v3
         with:
           keys: ${{ secrets.SUBMIT_KEYS }}

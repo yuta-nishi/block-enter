@@ -10,12 +10,12 @@
   ],
   "compilerOptions": {
     "jsx": "react-jsx",
+    "baseUrl": ".",
     "paths": {
       "~/*": [
         "./src/*"
       ]
     },
-    "baseUrl": ".",
     "target": "ES6",
     "useDefineForClassFields": true,
     "lib": [
@@ -30,18 +30,6 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    "exactOptionalPropertyTypes": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
+    "moduleResolution": "Node"
   }
 }
