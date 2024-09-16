@@ -3,6 +3,9 @@
   <h1 style="color: hsl(, 100%, 50%);">Block Enter</h1>
 </div>
 
+![test](https://github.com/yuta-nishi/block-enter/actions/workflows/codecov.yaml/badge.svg)
+[![codecov](https://codecov.io/gh/yuta-nishi/block-enter/graph/badge.svg?token=CLKW9RHPAU)](https://codecov.io/gh/yuta-nishi/block-enter)
+
 Extension to prevent sending by Enter in chat applications. \
 [Chrome Web Store link](https://chrome.google.com/webstore/detail/block-enter/epcbggfjoekpdmenggjelljjegjdbpog)
 
