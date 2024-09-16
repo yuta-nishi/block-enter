@@ -18,6 +18,7 @@ describe('IndexPopup', async () => {
 
   it('should fetch enabled state from storage on mount', async () => {
     mockGet.mockResolvedValue(false);
+    // biome-ignore lint/suspicious/useAwait:
     await act(async () => {
       render(<IndexPopup />);
     });
@@ -29,6 +30,7 @@ describe('IndexPopup', async () => {
 
   it('should toggle switch button state', async () => {
     mockGet.mockResolvedValue(true);
+    // biome-ignore lint/suspicious/useAwait:
     await act(async () => {
       render(<IndexPopup />);
     });

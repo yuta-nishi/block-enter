@@ -16,7 +16,7 @@ const preventDefaultEnter = (e: KeyboardEvent) => {
   if (
     e.key === 'Enter' &&
     !(e.ctrlKey || e.metaKey) &&
-    // chat.openai.com and www.perplexity.ai
+    // chatgpt.com and www.perplexity.ai
     ((e.target as HTMLTextAreaElement).tagName === 'TEXTAREA' ||
       // gemini.google.com
       (e.target as HTMLDivElement).role === 'textbox')

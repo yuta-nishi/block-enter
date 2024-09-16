@@ -11,8 +11,6 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
-const storage = new Storage();
-
 chrome.tabs.onUpdated.addListener((tabId, _changeInfo, tab) => {
   if (!tab.url) {
     chrome.action.disable(tabId);
@@ -28,7 +26,10 @@ chrome.tabs.onUpdated.addListener((tabId, _changeInfo, tab) => {
   chrome.action.enable(tabId);
 
   (async () => {
+    const storage = new Storage();
     const enabled = await storage.get<boolean>('enabled');
-    updateBadge(enabled, tabId);
+    if (enabled !== undefined) {
+      updateBadge(enabled, tabId);
+    }
   })();
 });

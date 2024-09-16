@@ -37,6 +37,7 @@
 				"useNamingConvention": "off"
 			},
 			"suspicious": {
+				"noConsole": "off",
 				"noConsoleLog": "info",
 				"noExplicitAny": "info",
 				"noReactSpecificProps": "off" // Use React
@@ -55,6 +56,10 @@
 		"lineWidth": 90
 	},
 	"javascript": {
+		"globals": [
+			"chrome",
+			"JSX"
+		],
 		"formatter": {
 			"indentStyle": "space",
 			"jsxQuoteStyle": "double",
