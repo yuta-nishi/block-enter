@@ -16,10 +16,10 @@ const preventDefaultEnter = (e: KeyboardEvent) => {
   if (
     e.key === 'Enter' &&
     !(e.ctrlKey || e.metaKey) &&
-    // chat.openai.com and www.perplexity.ai
-    ((e.target as HTMLTextAreaElement).tagName === 'TEXTAREA' ||
-      // gemini.google.com
-      (e.target as HTMLDivElement).role === 'textbox')
+    // FIXME: If ProseMirror is used, sending cannot be prevented even with stopPropagation
+    // ((e.target as HTMLDivElement).id === 'prompt-textarea' || // chatgpt.com
+    ((e.target as HTMLDivElement).role === 'textbox' || // gemini.google.com
+      (e.target as HTMLTextAreaElement).tagName === 'textarea') // www.perplexity.ai
   ) {
     e.stopPropagation();
   }

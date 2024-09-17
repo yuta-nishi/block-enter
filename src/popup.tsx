@@ -6,19 +6,20 @@ import { Switch } from '~/components/ui/switch';
 import '~/style.css';
 
 const IndexPopup = (): JSX.Element => {
-  const storage = new Storage();
-  const [enabled, setEnabled] = useState(true);
+  const [enabled, setEnabled] = useState<boolean | undefined>(undefined);
 
   useEffect(() => {
     const fetchEnabled = async () => {
-      const enabled = await storage.get<boolean>('enabled');
-      setEnabled(enabled);
+      const storage = new Storage();
+      const storedEnabled = await storage.get<boolean>('enabled');
+      setEnabled(storedEnabled ?? true);
     };
 
     fetchEnabled();
   }, []);
 
   const handleEnabled = async () => {
+    const storage = new Storage();
     await storage.set('enabled', !enabled);
     setEnabled(!enabled);
   };
