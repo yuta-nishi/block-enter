@@ -14,7 +14,7 @@ Extension to prevent sending by Enter in chat applications. \
 - [Gemini](https://gemini.google.com)
 - [Perplexity](https://www.perplexity.ai)
 
-## Plans for Future Support
+## Future support
 
 - [ChatGPT](https://chatgpt.com)
 - [Claude](https://claude.ai)
