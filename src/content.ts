@@ -9,15 +9,19 @@ export const config: PlasmoCSConfig = {
     'https://chatgpt.com/*',
     'https://gemini.google.com/*',
     'https://www.perplexity.ai/*',
+    'https://claude.ai/*',
   ],
 };
 
 const preventDefaultEnter = (e: KeyboardEvent) => {
+  const currUrl = window.location.href;
   const isOnlyEnter = e.key === 'Enter' && !e.shiftKey && !(e.ctrlKey || e.metaKey);
 
   const isChatApp =
-    (e.target as HTMLDivElement).role === 'textbox' || // gemini.google.com
-    (e.target as HTMLTextAreaElement).tagName === 'TEXTAREA'; // www.perplexity.ai
+    (currUrl.includes('gemini.google.com') &&
+      (e.target as HTMLDivElement).role === 'textbox') ||
+    (currUrl.includes('www.perplexity.ai') &&
+      (e.target as HTMLTextAreaElement).tagName === 'textarea');
 
   if (isOnlyEnter && isChatApp) {
     e.stopPropagation();
@@ -25,7 +29,11 @@ const preventDefaultEnter = (e: KeyboardEvent) => {
 
   // Prevent the keydown event to disable the send function of
   // the text area when using a rich editor (e.g. ProseMirror)
-  const isChatAppExtra = (e.target as HTMLDivElement).id === 'prompt-textarea'; // chatgpt.com
+  const isChatAppExtra =
+    currUrl.includes('chatgpt.com') &&
+    (e.target as HTMLDivElement).id === 'prompt-textarea';
+  // FIXME: Uncomment the following line when claude.ai is supported
+  // (currUrl.includes('claude.ai') && e.target instanceof HTMLDivElement);
 
   if (isOnlyEnter && isChatAppExtra) {
     e.preventDefault();
