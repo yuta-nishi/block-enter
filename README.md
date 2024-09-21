@@ -11,15 +11,13 @@ Extension to prevent sending by Enter in chat applications. \
 
 ## Target
 
+- [ChatGPT](https://chatgpt.com)
 - [Gemini](https://gemini.google.com)
 - [Perplexity](https://www.perplexity.ai)
 
 ## Future support
 
-- [ChatGPT](https://chatgpt.com)
 - [Claude](https://claude.ai)
-
-These use [ProseMirror](https://prosemirror.net/) and cannot be added immediately.
 
 ## Usage
 

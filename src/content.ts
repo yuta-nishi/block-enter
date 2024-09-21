@@ -13,13 +13,30 @@ export const config: PlasmoCSConfig = {
 };
 
 const preventDefaultEnter = (e: KeyboardEvent) => {
-  const isOnlyEnter = e.key === 'Enter' && !(e.ctrlKey || e.metaKey);
-  const isTargetPage =
+  const isOnlyEnter = e.key === 'Enter' && !e.shiftKey && !(e.ctrlKey || e.metaKey);
+
+  const isChatApp =
     (e.target as HTMLDivElement).role === 'textbox' || // gemini.google.com
     (e.target as HTMLTextAreaElement).tagName === 'TEXTAREA'; // www.perplexity.ai
 
-  if (isOnlyEnter && isTargetPage) {
+  if (isOnlyEnter && isChatApp) {
     e.stopPropagation();
+  }
+
+  // Prevent the keydown event to disable the send function of
+  // the text area when using a rich editor (e.g. ProseMirror)
+  const isChatAppExtra = (e.target as HTMLDivElement).id === 'prompt-textarea'; // chatgpt.com
+
+  if (isOnlyEnter && isChatAppExtra) {
+    e.preventDefault();
+
+    const newEvent = new KeyboardEvent('keydown', {
+      key: 'Enter',
+      shiftKey: true,
+      bubbles: true,
+      cancelable: true,
+    });
+    (e.target as HTMLDivElement).dispatchEvent(newEvent);
   }
 };
 
