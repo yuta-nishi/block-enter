@@ -13,9 +13,10 @@ export const config: PlasmoCSConfig = {
 };
 
 const preventDefaultEnter = (e: KeyboardEvent) => {
+  const isOnlyEnter = e.key === 'Enter' && !(e.ctrlKey || e.metaKey);
+
   if (
-    e.key === 'Enter' &&
-    !(e.ctrlKey || e.metaKey) &&
+    isOnlyEnter &&
     // FIXME: If ProseMirror is used, sending cannot be prevented even with stopPropagation
     // ((e.target as HTMLDivElement).id === 'prompt-textarea' || // chatgpt.com
     ((e.target as HTMLDivElement).role === 'textbox' || // gemini.google.com
