@@ -57,8 +57,7 @@
     "host_permissions": [
       "https://chatgpt.com/*",
       "https://gemini.google.com/*",
-      "https://www.perplexity.ai/*",
-      "https://claude.ai/*"
+      "https://www.perplexity.ai/*"
     ],
     "permissions": [
       "storage",
