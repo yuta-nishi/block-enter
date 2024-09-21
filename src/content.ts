@@ -14,14 +14,11 @@ export const config: PlasmoCSConfig = {
 
 const preventDefaultEnter = (e: KeyboardEvent) => {
   const isOnlyEnter = e.key === 'Enter' && !(e.ctrlKey || e.metaKey);
+  const isTargetPage =
+    (e.target as HTMLDivElement).role === 'textbox' || // gemini.google.com
+    (e.target as HTMLTextAreaElement).tagName === 'TEXTAREA'; // www.perplexity.ai
 
-  if (
-    isOnlyEnter &&
-    // FIXME: If ProseMirror is used, sending cannot be prevented even with stopPropagation
-    // ((e.target as HTMLDivElement).id === 'prompt-textarea' || // chatgpt.com
-    ((e.target as HTMLDivElement).role === 'textbox' || // gemini.google.com
-      (e.target as HTMLTextAreaElement).tagName === 'textarea') // www.perplexity.ai
-  ) {
+  if (isOnlyEnter && isTargetPage) {
     e.stopPropagation();
   }
 };
