@@ -26,4 +26,4 @@ Toggle on/off by clicking the extension icon.
 > [!NOTE]
 > In the case of Claude, reloading is required once when toggling.
 
-![demo](./assets/demo.gif)
+![demo](./assets/demo.webp)
