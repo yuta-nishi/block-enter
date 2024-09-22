@@ -11,15 +11,10 @@ Extension to prevent sending by Enter in chat applications. \
 
 ## Target
 
-- [Gemini](https://gemini.google.com)
-- [Perplexity](https://www.perplexity.ai)
-
-## Future support
-
 - [ChatGPT](https://chatgpt.com)
+- [Gemini](https://gemini.google.com)
 - [Claude](https://claude.ai)
-
-These use [ProseMirror](https://prosemirror.net/) and cannot be added immediately.
+- [Perplexity](https://www.perplexity.ai)
 
 ## Usage
 
@@ -28,4 +23,7 @@ Ctrl/Cmd + Enter： Send
 
 Toggle on/off by clicking the extension icon.
 
-[Demo Video](https://www.youtube.com/watch?v=qracBb9PGDk)
+> [!NOTE]
+> In the case of Claude, reloading is required once when toggling.
+
+![demo](./assets/demo.gif)

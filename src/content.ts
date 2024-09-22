@@ -9,28 +9,60 @@ export const config: PlasmoCSConfig = {
     'https://chatgpt.com/*',
     'https://gemini.google.com/*',
     'https://www.perplexity.ai/*',
+    'https://claude.ai/*',
   ],
+  run_at: 'document_start', // Run as soon as possible. Required especially for claude.
 };
 
 const preventDefaultEnter = (e: KeyboardEvent) => {
-  if (
-    e.key === 'Enter' &&
-    !(e.ctrlKey || e.metaKey) &&
-    // FIXME: If ProseMirror is used, sending cannot be prevented even with stopPropagation
-    // ((e.target as HTMLDivElement).id === 'prompt-textarea' || // chatgpt.com
-    ((e.target as HTMLDivElement).role === 'textbox' || // gemini.google.com
-      (e.target as HTMLTextAreaElement).tagName === 'textarea') // www.perplexity.ai
-  ) {
+  const currUrl = window.location.href;
+  const isOnlyEnter = e.key === 'Enter' && !e.shiftKey && !(e.ctrlKey || e.metaKey);
+
+  const isChatApp =
+    (currUrl.includes('gemini.google.com') &&
+      (e.target as HTMLDivElement).role === 'textbox') ||
+    (currUrl.includes('www.perplexity.ai') &&
+      (e.target as HTMLTextAreaElement).tagName === 'TEXTAREA');
+
+  if (isOnlyEnter && isChatApp) {
     e.stopPropagation();
+  }
+
+  // Prevent the keydown event to disable the send function of
+  // the text area when using a rich editor (e.g. ProseMirror)
+  const isChatGPT =
+    currUrl.includes('chatgpt.com') &&
+    (e.target as HTMLDivElement).id === 'prompt-textarea';
+
+  if (isOnlyEnter && isChatGPT) {
+    e.preventDefault();
+
+    const newEvent = new KeyboardEvent('keydown', {
+      key: 'Enter',
+      shiftKey: true,
+      bubbles: true,
+      cancelable: true,
+    });
+    (e.target as HTMLDivElement).dispatchEvent(newEvent);
+  }
+
+  const isClaude = currUrl.includes('claude.ai') && e.target instanceof HTMLDivElement;
+
+  if (isOnlyEnter && isClaude) {
+    e.stopImmediatePropagation();
   }
 };
 
 const addKeyDownListener = () => {
-  document.addEventListener('keydown', preventDefaultEnter, { capture: true });
+  document.addEventListener('keydown', preventDefaultEnter, {
+    capture: true,
+  });
 };
 
 const removeKeyDownListener = () => {
-  document.removeEventListener('keydown', preventDefaultEnter, { capture: true });
+  document.removeEventListener('keydown', preventDefaultEnter, {
+    capture: true,
+  });
 };
 
 const storage = new Storage();
