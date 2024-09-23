@@ -1,5 +1,5 @@
 {
   "description": {
-    "message": "Prevents Enter Key Submission on ChatGPT Page and Enables Sending with Ctrl/Cmd+Enter."
+    "message": "Prevents Enter Key Submission on ChatApp Page and Enables Sending with Ctrl/Cmd+Enter."
   }
 }

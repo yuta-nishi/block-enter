@@ -1,5 +1,5 @@
 {
   "description": {
-    "message": "ChatGPTのページでEnterによる送信を防ぎ、Ctrl/Cmd+Enterで送信するようにします。"
+    "message": "ChatアプリのページでEnterによる送信を防ぎ、Ctrl/Cmd+Enterで送信するようにします。"
   }
 }
